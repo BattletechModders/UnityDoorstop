@@ -6,8 +6,8 @@ function build_info()
         version = {
             major = 4,
             minor = 0,
-            patch = 0,
-            release = "",
+            patch = 1,
+            release = "steamfix",
         },
     }
 end
