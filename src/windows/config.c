@@ -167,10 +167,6 @@ static inline void init_cmd_args() {
 
 static inline void init_env_vars() {
     char_t *disable_env = getenv(TEXT("DOORSTOP_DISABLE"));
-    if (!config.ignore_disabled_env && disable_env != 0) {
-        LOG("DOORSTOP_DISABLE is set! Disabling Doorstop!");
-        config.enabled = FALSE;
-    }
     shutenv(disable_env);
 }
 

@@ -11,10 +11,6 @@
 bool_t mono_debug_init_called = FALSE;
 
 void mono_doorstop_bootstrap(void *mono_domain) {
-    if (getenv(TEXT("DOORSTOP_INITIALIZED"))) {
-        LOG("DOORSTOP_INITIALIZED is set! Skipping!");
-        return;
-    }
     setenv(TEXT("DOORSTOP_INITIALIZED"), TEXT("TRUE"), TRUE);
 
     mono.thread_set_main(mono.thread_current());

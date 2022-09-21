@@ -1,5 +1,6 @@
 # Tools
 tools/
+.idea
 
 # Xmake cache
 .xmake/
