@@ -7,7 +7,7 @@ function build_info()
             major = 4,
             minor = 4,
             patch = 1,
-            release = "",
+            release = "steamfix",
         },
     }
 end
