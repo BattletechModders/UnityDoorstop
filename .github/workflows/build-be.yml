@@ -143,7 +143,6 @@ jobs:
 
   collect:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     needs:
       - build-windows
       - build-linux
@@ -171,7 +170,7 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "ci"
+          automatic_release_tag: "${{ env.doorstop_version }}"
           prerelease: true
-          title: "CI build"
+          title: "latest ${{ env.doorstop_version }}"
           files: dist/*.zip
